@@ -1,0 +1,406 @@
+.jeeeyul-custom-theme{
+	/* This class must appear first. */
+}
+
+/**************************************************
+ * GTK3
+ **************************************************/
+GtkToolbar#swt-toolbar-flat {
+	padding: 0px;
+}
+
+/**************************************************
+ * Main Toolbar
+ **************************************************/
+#org-eclipse-ui-main-toolbar {
+	background-color:#eeeeee #dedede 100%;
+}
+
+#org-eclipse-ui-main-toolbar > .Draggable {
+	handle-image:
+		url(jeeeyul://drag-handle?height=22&background-color=#e6e6e6&embossed=false);
+}
+
+#org-eclipse-ui-main-toolbar > .TrimStack {
+	frame-image: none;
+	handle-image:
+		url(jeeeyul://drag-handle?height=22&background-color=#e6e6e6&embossed=false);
+}
+
+#org-eclipse-ui-main-toolbar #PerspectiveSwitcher {
+	background-color: #eeeeee #dedede 100%;
+	handle-image: none;
+	eclipse-perspective-keyline-color: #abb0bf;
+}
+
+#org-eclipse-ui-main-toolbar #PerspectiveSwitcher ToolBar {
+	jtool-item-color : #dedede;
+}
+
+
+
+/**************************************************
+ * Status Bar
+ **************************************************/
+#org-eclipse-ui-trim-status{
+	background-color:#eeeeee #dedede 100%;
+}
+
+#org-eclipse-ui-trim-status,
+#org-eclipse-ui-trim-status *
+{
+	color : #24272a;
+}
+
+#org-eclipse-ui-trim-status ToolBar{
+	jtool-item-color : #24272a;
+}
+
+#org-eclipse-ui-trim-status .Draggable {
+	handle-image:
+		url(jeeeyul://drag-handle?height=22&background-color=#e6e6e6&embossed=false);
+}
+
+#org-eclipse-ui-trim-status .TrimStack {
+	handle-image:
+		url(jeeeyul://drag-handle?height=22&background-color=#e6e6e6&embossed=false);
+	frame-image: url(jeeeyul://frame?background-color=#e6e6e6);
+	frame-cuts: 4px 2px 5px 16px;
+}
+
+
+
+/**************************************************
+ * Trim Stack
+ **************************************************/
+Shell.MTrimmedWindow > .MTrimBar > .TrimStack {
+	frame-image: url(jeeeyul://frame?background-color=#d9d9d9);
+	frame-cuts: 4px 2px 5px 16px;
+	handle-image:
+		url(jeeeyul://drag-handle?height=22&background-color=#d9d9d9&embossed=false);
+}
+
+Shell.MTrimmedWindow > .MTrimBar > .MToolBar.Draggable {
+	handle-image:
+		url(jeeeyul://drag-handle?height=22&background-color=#d9d9d9&embossed=false);
+}
+
+
+
+/**************************************************
+ * Inactive Part Stack
+ **************************************************/
+.MPartStack {
+	swt-tab-renderer: url('bundleclass://net.jeeeyul.eclipse.themes/net.jeeeyul.eclipse.themes.rendering.JeeeyulsTabRenderer');
+	swt-mru-visible: true;
+	
+	/* layout */
+	swt-tab-height: 22px;
+	jtab-border-radius: 0px;
+	jtab-spacing: 0px;
+	jtab-item-padding: 0px 4px;
+	jtab-item-horizontal-spacing: 3px;
+	jtab-padding : 0px;
+	jtab-truncate-tab-items : true;
+	jtab-use-ellipses : false;
+	jtab-minimum-characters : 1;
+	jtab-close-button-alignment : middle;
+	
+	jtab-margin : 0px 1px 1px 0px;
+	jtab-shadow-color: none;
+	jtab-shadow-position: 0px 0px;
+	jtab-shadow-radius: 0px;
+	
+	/* tab background */
+	jtab-header-background : #ffffff #ffffff 100%;
+	jtab-border-color : #9d9d9d #9d9d9d 100%;
+	background : #ffffff;
+	
+	/* selected tabs */
+	jtab-selected-tab-background: #ffffff #ffffff 100%;
+	jtab-selected-border-color: none;
+	jtab-selected-text-shadow-color: none;
+
+	/* unselected tabs */
+	jtab-unselected-tabs-background: none;
+	
+	jtab-unselected-border-color: none;
+	jtab-unselected-text-shadow-position: 0px 1px;
+	jtab-unselected-text-shadow-color: #ffffff;
+	
+	/* hover tabs */
+	jtab-hover-color : #000000;
+	jtab-hover-tabs-background: #f4f4f4 #ebebeb 100%;
+	
+	jtab-hover-border-color: none;
+	jtab-hover-text-shadow-position: 0px 1px;
+	jtab-hover-text-shadow-color: #ffffff;
+	
+	jtab-close-button-color: #cdcdcd;
+	jtab-close-button-hot-color: #b05656;
+	jtab-close-button-active-color: #dd1b1b;
+	jtab-close-button-line-width: 1px;
+	
+	jtab-chevron-color: #000000;
+}
+
+.MPartStack>CTabItem {
+	/* unselected tab text */
+	color: #000000;
+}
+
+.MPartStack>CTabItem:selected {
+	/* selected tab text */
+	color: #000000;
+}
+
+
+/**************************************************
+ * Active Part Stack
+ **************************************************/
+.MPartStack.active {
+	swt-tab-renderer: url('bundleclass://net.jeeeyul.eclipse.themes/net.jeeeyul.eclipse.themes.rendering.JeeeyulsTabRenderer');
+	
+	/* tab background */
+	jtab-header-background : #ffffff #ffffff 100%;
+	jtab-border-color : #9d9d9d #9d9d9d 100%;
+	background : #ffffff;
+	
+	/* selected tabs */
+	jtab-selected-tab-background: #f3f3f3 #ffffff 100%;
+	jtab-selected-border-color: none;
+	jtab-selected-text-shadow-color: none;
+
+	/* unselected tabs */
+	jtab-unselected-tabs-background: none;
+	
+	jtab-unselected-border-color: none;
+	jtab-unselected-text-shadow-position: 0px 1px;
+	jtab-unselected-text-shadow-color: #ffffff;
+	
+	/* hover tabs */
+	jtab-hover-color : #000000;
+	jtab-hover-tabs-background: #f4f4f4 #ebebeb 100%;
+	
+	jtab-hover-border-color: none;
+	jtab-hover-text-shadow-position: 0px 1px;
+	jtab-hover-text-shadow-color: #ffffff;
+	
+	jtab-close-button-color: #cdcdcd;
+	jtab-close-button-hot-color: #b05656;
+	jtab-close-button-active-color: #dd1b1b;
+	jtab-close-button-line-width: 1px;
+	
+	jtab-chevron-color: #000000;
+}
+
+.MPartStack.active>CTabItem {
+	/* unselected tab text */
+	color: #000000;
+}
+
+.MPartStack.active>CTabItem:selected {
+	/* selected tab text */
+	color: #000000;
+}
+
+/**************************************************
+ * Busy Part
+ **************************************************/
+.MPart{
+	font-style: normal;
+}
+
+.MPart.busy {
+	font-style: italic;
+}
+
+
+
+/**************************************************
+ * Editor Part Stack
+ **************************************************/
+.MPartStack.EditorStack{
+	jtab-truncate-tab-items : true;
+	jtab-minimum-characters : 8;
+}
+
+
+
+/**************************************************
+ * Empty Editor Stack
+ **************************************************/
+#org-eclipse-ui-editorss.MArea .MPartStack.empty{
+	jtab-header-background : #ffffff #ffffff 100%;
+	jtab-border-color : #9d9d9d #9d9d9d 100%;
+	background : #ffffff;
+}
+
+
+
+/**************************************************
+ * Editors Area
+ **************************************************/
+CTabFolder#org-eclipse-ui-editorss.MArea{
+	swt-tab-renderer: url('bundleclass://net.jeeeyul.eclipse.themes/net.jeeeyul.eclipse.themes.rendering.JeeeyulsTabRenderer');
+	swt-tab-height: 10px;
+	jtab-header-background : #dddada #c2c2c2 100%;
+	jtab-border-color : none;
+	jtab-selected-tab-background: #dddada #c2c2c2 100%;
+	jtab-selected-border-color: none;
+	swt-single : true;
+	
+	jtab-margin : 0px;
+	jtab-shadow-color: none;
+	jtab-shadow-position: 0px 0px;
+	jtab-shadow-radius: 0px;
+	jtab-padding : 0px;
+}
+
+CTabFolder#org-eclipse-ui-editorss.MArea Composite.MPartSashContainer {
+	background-color: #c2c2c2;
+}
+
+
+
+/**************************************************
+ * Text Editor
+ **************************************************/
+.MPart.Editor Canvas {
+	background-color: #f0f0f0;
+}
+
+.MPart.Editor StyledText,
+.MPart.Editor StyledTextWithoutVerticalBar /* PyDev support */{
+	jeditor-line-style : none;
+	jeditor-line-color : #f0f0f0;
+	jeditor-range-indicator-color: #e4e4e5;
+}
+
+
+
+/**************************************************
+ * Customized Text Editor Support
+ **************************************************/
+.MPart Section StyledText
+{
+	background : jtexteditor-background;
+	color : jtexteditor-foreground;
+}
+
+
+
+/**************************************************
+ * Forms
+ **************************************************/
+.MPart FormHeading {
+	jtext-background: #ffffff #e7f1fb 100%;
+	color : #586a7e;
+	jbottom-keyline-1-color: #ffffff;
+	jbottom-keyline-2-color: #b1d1f3;
+}
+
+.MPart Section {
+	jtitle-bar-background-color:  #e7f1fb;
+	jtitle-bar-border-color:  #b1d1f3;
+	jtitle-bar-text-color :  #586a7e;
+	jtitle-bar-active-text-color :  #7b8fa5;
+}
+
+.MPart FormText {
+	hyperlink-color: #0000ff;
+	active-hyperlink-color: #11149b;
+}
+
+
+/**************************************************
+ * Others
+ **************************************************/
+.DragFeedback {
+	background-color: #ff6900;
+	jswt-alpha: 127;
+}
+
+#org-eclipse-ui-HeapStatus {
+	color: #F9FDBA;
+}
+
+/**************************************************
+ * User Color and Font Changes
+ **************************************************/
+IEclipsePreferences#org-eclipse-ui-editors {
+  preferences:
+    'currentIPColor=0,19,47'
+    'secondaryIPColor=0,19,47'
+    'occurrenceIndicationColor=80,80,1'
+    'writeOccurrenceIndicationColor=0,78,60'
+    'searchResultIndicationColor=97,97,97'
+    'filteredSearchResultIndicationColor=97,97,97'
+    'changeIndicationColor=255,193,7'
+    'additionIndicationColor=0,184,212'
+    'deletionIndicationColor=224,226,228'
+    'matchingTagIndicationColor=97,97,97'
+    'occurrenceIndicationColor=80,80,1'
+    'writeOccurrenceIndicationColor=0,78,60';
+}
+
+
+/**************************************************
+ * User Custom CSS
+ **************************************************/
+CTabItem {
+	swt-show-close: false !important;
+	font-size: 11px;
+}
+
+CTabFolder {
+  swt-maximize-visible: false !important;
+  swt-maximized: false !important;
+  swt-minimize-visible: false  !important;
+  swt-minimized: false !important;
+  font-size: 11px;
+}
+
+HeapStatus#org-eclipse-ui-HeapStatus {
+	color: #000000;
+	font-size: 11px;
+}
+
+
+/**************************************************
+ * Window
+ **************************************************/
+Shell.MTrimmedWindow {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-color: #d9d9d9;
+}
+
+.MPartSashContainer {
+	jsash-width : 0px;
+	background-color: #d9d9d9;
+}
+
+SashForm {
+    background-color: #c1d5ef;
+    border: 10px solid black;
+}
+
+Sash {
+    background-color: red;
+    border: 10px solid red;
+}
+
+Sash-Handle {
+}
+
+CTabFolder {
+	border-visible: false;
+	border: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
