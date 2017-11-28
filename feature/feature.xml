@@ -2,7 +2,7 @@
 <feature
       id="at.spot.eclipse.themes.feature"
       label="Eclipse Themes Feature"
-      version="1.0.0">
+      version="1.0.0.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -41,7 +41,7 @@
          id="at.spot.eclipse.themes.core"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
 </feature>

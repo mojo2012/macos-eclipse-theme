@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/at.spot.eclipse.themes.feature_1.2.0.qualifier.jar" id="at.spot.eclipse.themes.feature" version="1.2.0.qualifier">
+   <feature url="features/at.spot.eclipse.themes.feature_1.0.0.qualifier.jar" id="at.spot.eclipse.themes.feature" version="1.0.0.qualifier">
       <category name="at.spot.eclipse.themes"/>
    </feature>
    <category-def name="at.spot.eclipse.themes" label="Eclipse Appearence"/>
