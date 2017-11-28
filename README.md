@@ -1,5 +1,3 @@
-# eclipse-themes ![build status](https://travis-ci.org/gayanper/eclipse-themes.svg?branch=master)
-Eclipse themes and some plugins to enhance the developer experience.
+# macos-eclipse-theme
+Eclipse themes styled to look as native as possible on macOS.
 
-# License
-Eclise-Themes is distributed under the [EPL](http://www.eclipse.org/legal/epl-v10.html) license.
