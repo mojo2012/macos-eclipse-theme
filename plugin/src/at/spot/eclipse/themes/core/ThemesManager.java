@@ -10,8 +10,6 @@ import org.eclipse.ui.PlatformUI;
 
 /**
  * The Class ThemesManager which contains and manage theme related operations.
- *
- * @author gayanper
  */
 @SuppressWarnings("restriction")
 public class ThemesManager {
@@ -46,8 +44,7 @@ public class ThemesManager {
 	}
 
 	private IThemeEngine getThemeEngine() {
-		MApplication application = (MApplication) PlatformUI.getWorkbench()
-				.getService(MApplication.class);
+		MApplication application = (MApplication) PlatformUI.getWorkbench().getService(MApplication.class);
 		IEclipseContext context = application.getContext();
 		IThemeEngine engine = context.get(IThemeEngine.class);
 		return engine;
