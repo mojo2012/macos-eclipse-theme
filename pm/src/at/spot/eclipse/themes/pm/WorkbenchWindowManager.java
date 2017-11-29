@@ -3,7 +3,6 @@ package at.spot.eclipse.themes.pm;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.ui.IPerspectiveDescriptor;
 import org.eclipse.ui.IPerspectiveListener;
 import org.eclipse.ui.IWindowListener;
@@ -41,10 +40,6 @@ public class WorkbenchWindowManager {
 		public void windowActivated(final IWorkbenchWindow window) {
 			if (!registered.contains(window)) {
 				window.addPerspectiveListener(perspectiveListener);
-
-				final ToolBar tb = window.getShell().getToolBar();
-				tb.setVisible(true);
-
 				Activator.getDefault().getMenuBarManager().updateMenuToCommandState();
 				registered.add(window);
 			}
