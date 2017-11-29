@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.pm.pref;
+package at.spot.eclipse.themes.ui.pref;
 
 import java.util.List;
 
@@ -8,8 +8,10 @@ import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.IntegerFieldEditor;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
-import at.spot.eclipse.themes.pm.Activator;
-import at.spot.eclipse.themes.pm.theme.ThemeHandler;
+
+import at.spot.eclipse.themes.core.Activator;
+import at.spot.eclipse.themes.core.handlers.ThemeHandler;
+import at.spot.eclipse.themes.internal.Preferences;
 
 /**
  * The Class PreferencePage.

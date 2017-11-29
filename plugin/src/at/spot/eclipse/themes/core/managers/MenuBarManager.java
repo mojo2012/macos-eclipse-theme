@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.pm.commands;
+package at.spot.eclipse.themes.core.managers;
 
 import java.util.ArrayList;
 import java.util.Iterator;

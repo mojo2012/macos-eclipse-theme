@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes;
+package at.spot.eclipse.themes.internal;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,8 +14,6 @@ import org.eclipse.core.runtime.URIUtil;
 /**
  * The Class CustomizeMapping which keeps mapping for customization file against
  * each theme id.
- *
- * @author gayanper
  */
 public final class CustomizeFileMapping {
 

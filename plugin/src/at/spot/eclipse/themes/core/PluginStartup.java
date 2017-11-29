@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes;
+package at.spot.eclipse.themes.core;
 
 import org.eclipse.ui.IStartup;
 
@@ -6,7 +6,7 @@ public class PluginStartup implements IStartup {
 
 	@Override
 	public void earlyStartup() {
-		// Do nothing, This is just to force the plugin load.
+		System.out.println("plugin startup");
 	}
 
 }

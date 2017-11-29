@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.pm;
+package at.spot.eclipse.themes.core.managers;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,6 +9,8 @@ import org.eclipse.ui.IWindowListener;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
+
+import at.spot.eclipse.themes.core.Activator;
 
 public class WorkbenchWindowManager {
 

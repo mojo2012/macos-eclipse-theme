@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.core;
+package at.spot.eclipse.themes.core.managers;
 
 import java.util.List;
 

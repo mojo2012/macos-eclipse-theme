@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.pref;
+package at.spot.eclipse.themes.ui.pref;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,9 +21,6 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
-import at.spot.eclipse.themes.CustomizeFileMapping;
-import at.spot.eclipse.themes.ThemeId;
-import at.spot.eclipse.themes.core.ThemesManager;
 
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
@@ -32,9 +29,12 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
+import at.spot.eclipse.themes.core.managers.ThemesManager;
+import at.spot.eclipse.themes.internal.CustomizeFileMapping;
+import at.spot.eclipse.themes.internal.ThemeId;
+
 @SuppressWarnings("restriction")
-public class CustomizeThemePage extends PreferencePage implements
-		IWorkbenchPreferencePage {
+public class CustomizeThemePage extends PreferencePage implements IWorkbenchPreferencePage {
 
 	// TODO: Introduce DI
 	private ThemesManager manager = new ThemesManager();
@@ -64,8 +64,7 @@ public class CustomizeThemePage extends PreferencePage implements
 	}
 
 	private void createEditButtons(Composite content) {
-		final ImmutableSet<String> pluginThemes = FluentIterable
-				.from(Lists.newArrayList(ThemeId.values()))
+		final ImmutableSet<String> pluginThemes = FluentIterable.from(Lists.newArrayList(ThemeId.values()))
 				.transform(new Function<ThemeId, String>() {
 
 					@Override
@@ -74,14 +73,13 @@ public class CustomizeThemePage extends PreferencePage implements
 					}
 				}).toSet();
 
-		final Iterable<ITheme> allThemes = Iterables.filter(
-				manager.getAllThemes(), new Predicate<ITheme>() {
+		final Iterable<ITheme> allThemes = Iterables.filter(manager.getAllThemes(), new Predicate<ITheme>() {
 
-					@Override
-					public boolean apply(ITheme input) {
-						return pluginThemes.contains(input.getId());
-					}
-				});
+			@Override
+			public boolean apply(ITheme input) {
+				return pluginThemes.contains(input.getId());
+			}
+		});
 
 		for (ITheme theme : allThemes) {
 			Label label = new Label(content, SWT.NULL);
@@ -89,8 +87,7 @@ public class CustomizeThemePage extends PreferencePage implements
 
 			Button button = new Button(content, SWT.PUSH);
 			button.setText("Edit");
-			button.addSelectionListener(new EditAction(ThemeId.forId(theme
-					.getId())));
+			button.addSelectionListener(new EditAction(ThemeId.valueOf(theme.getId())));
 		}
 	}
 
@@ -106,10 +103,9 @@ public class CustomizeThemePage extends PreferencePage implements
 		public void widgetSelected(SelectionEvent e) {
 			try {
 				final File file = CustomizeFileMapping.customizeFile(themeId);
-				final IFileStore fileStore = EFS.getLocalFileSystem().getStore(
-						file.toURI());
-				IDE.openEditorOnFileStore(PlatformUI.getWorkbench()
-						.getActiveWorkbenchWindow().getActivePage(), fileStore);
+				final IFileStore fileStore = EFS.getLocalFileSystem().getStore(file.toURI());
+				IDE.openEditorOnFileStore(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage(),
+						fileStore);
 			} catch (PartInitException | URISyntaxException | IOException ex) {
 				// TODO: do proper logging.
 				ex.printStackTrace();

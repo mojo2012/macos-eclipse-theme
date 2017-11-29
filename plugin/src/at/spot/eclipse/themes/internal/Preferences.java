@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.pm.pref;
+package at.spot.eclipse.themes.internal;
 
 /**
  * The Class Preferences which contains constants preference keys.

@@ -1,8 +1,9 @@
-package at.spot.eclipse.themes.pm.pref;
+package at.spot.eclipse.themes.internal;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
-import at.spot.eclipse.themes.pm.Activator;
+
+import at.spot.eclipse.themes.core.Activator;
 
 /**
  * The Class DefaultPreferenceInitializer.

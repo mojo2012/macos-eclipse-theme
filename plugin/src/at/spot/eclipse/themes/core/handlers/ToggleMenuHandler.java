@@ -1,10 +1,11 @@
-package at.spot.eclipse.themes.pm.commands;
+package at.spot.eclipse.themes.core.handlers;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.ui.handlers.HandlerUtil;
-import at.spot.eclipse.themes.pm.Activator;
+
+import at.spot.eclipse.themes.core.Activator;
 
 public class ToggleMenuHandler extends AbstractHandler {
 

@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes;
+package at.spot.eclipse.themes.ui.renderers;
 
 import org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering;
 import org.eclipse.swt.SWT;

@@ -20,6 +20,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.e4.ui.css.swt.theme,
  org.eclipse.e4.ui.css.swt;bundle-version="0.13.0"
 Eclipse-BundleShape: dir
-Bundle-Activator: at.spot.eclipse.themes.Activator
+Bundle-Activator: at.spot.eclipse.themes.core.Activator
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: mojo2012

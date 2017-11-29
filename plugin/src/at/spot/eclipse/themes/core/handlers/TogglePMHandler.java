@@ -1,4 +1,4 @@
-package at.spot.eclipse.themes.pm.commands;
+package at.spot.eclipse.themes.core.handlers;
 
 import java.io.IOException;
 import java.util.Set;
@@ -15,9 +15,9 @@ import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;
-import at.spot.eclipse.themes.pm.Activator;
-import at.spot.eclipse.themes.pm.pref.Preferences;
-import at.spot.eclipse.themes.pm.theme.ThemeHandler;
+
+import at.spot.eclipse.themes.core.Activator;
+import at.spot.eclipse.themes.internal.Preferences;
 
 import com.google.common.collect.Sets;
 

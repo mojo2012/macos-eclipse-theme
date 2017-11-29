@@ -12,16 +12,22 @@
    <extension
          point="org.eclipse.ui.startup">
       <startup
-            class="at.spot.eclipse.themes.PluginStartup">
+            class="at.spot.eclipse.themes.core.PluginStartup">
       </startup>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.eclipse.ui.preferencePages.Views"
-            class="at.spot.eclipse.themes.pref.CustomizeThemePage"
+            class="at.spot.eclipse.themes.internal.CustomizeThemePage"
             id="at.spot.eclipse.themes.customizeTheme"
             name="Customize Theme">
+      </page>
+      <page
+            category="org.eclipse.ui.preferencePages.Views"
+            class="at.spot.eclipse.themes.ui.pref.PreferencePage"
+            id="at.spot.eclipse.themes.pm.preferencePage"
+            name="Presentation Mode">
       </page>
    </extension>
    <extension
@@ -32,7 +38,7 @@
       </category>
       <command
             categoryId="presentation-mode-ui.category"
-            defaultHandler="at.spot.eclipse.themes.pm.commands.TogglePMHandler"
+            defaultHandler="at.spot.eclipse.themes.core.handlers.TogglePMHandler"
             id="presentation-mode-ui.toggle-mode"
             name="Toggle Mode">
          <state
@@ -53,7 +59,7 @@
       </command>
       <command
             categoryId="presentation-mode-ui.category"
-            defaultHandler="at.spot.eclipse.themes.pm.commands.ToggleMenuHandler"
+            defaultHandler="at.spot.eclipse.themes.core.handlers.ToggleMenuHandler"
             id="presentation-mode-ui.toggle-menu"
             name="Toggle Menu">
          <state
@@ -97,24 +103,9 @@
       </menuContribution>
    </extension>
    <extension
-         point="org.eclipse.ui.preferencePages">
-      <page
-            category="org.eclipse.ui.preferencePages.Views"
-            class="at.spot.eclipse.themes.pm.pref.PreferencePage"
-            id="at.spot.eclipse.themes.pm.preferencePage"
-            name="Presentation Mode">
-      </page>
-   </extension>
-   <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="at.spot.eclipse.themes.pm.pref.DefaultPreferenceInitializer">
+            class="at.spot.eclipse.themes.internal.DefaultPreferenceInitializer">
       </initializer>
-   </extension>
-   <extension
-         point="org.eclipse.ui.startup">
-      <startup
-            class="at.spot.eclipse.themes.pm.PluginStartup">
-      </startup>
    </extension>
 </plugin>

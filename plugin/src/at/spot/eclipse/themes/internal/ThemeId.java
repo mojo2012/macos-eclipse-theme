@@ -1,9 +1,7 @@
-package at.spot.eclipse.themes;
+package at.spot.eclipse.themes.internal;
 
 /**
  * The Enum ThemeId.
- *
- * @author gayanper
  */
 public enum ThemeId {
 	MACOS("at.spot.eclipse.themes.macos");
@@ -21,14 +19,5 @@ public enum ThemeId {
 	 */
 	public String getId() {
 		return themeId;
-	}
-
-	public static ThemeId forId(final String id) {
-		switch (id) {
-		case "at.spot.eclipse.themes.material-light":
-			return MACOS;
-		default:
-			return null;
-		}
 	}
 }
