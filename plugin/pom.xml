@@ -12,4 +12,9 @@
 	</parent>
 	<artifactId>at.spot.eclipse.themes</artifactId>
 	<packaging>eclipse-plugin</packaging>
+
+	<dependencies>
+
+	</dependencies>
+
 </project>
