@@ -16,11 +16,9 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.e4.ui.workbench.renderers.swt.TrimBarLayout;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
-import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
@@ -67,8 +65,8 @@ public class Activator extends AbstractUIPlugin {
 					tb.setLayout(new TrimBarLayout(true));
 
 					createToolbarSeparator(tb);
-					// createToolbarButton(tb, "Run", null);
-					createToolbarButton(tb, "", getImage(ISharedImages.IMG_TOOL_FORWARD));
+					createToolbarButton(tb, "Run", null);
+					// createToolbarButton(tb, "", getImage(ISharedImages.IMG_TOOL_FORWARD));
 					// createToolbarButton(tb, "Debug", getImage(ISharedImages.IMG_TOOL_FORWARD));
 					// createToolbarButton(tb, "Stop", getImage(ISharedImages.IMG_TOOL_FORWARD));
 					// createToolbarButton(tb, "Step into",
@@ -124,19 +122,19 @@ public class Activator extends AbstractUIPlugin {
 	}
 
 	protected void createToolbarButton(ToolBar toolbar, String text, Image icon) {
-		ToolItem toolItem = new ToolItem(toolbar, SWT.PUSH);
+		ToolItem toolItem = new ToolItem(toolbar, 0);
 
-		Button button = new Button(toolbar, SWT.PUSH);
-		toolItem.setControl(button);
+		// Button button = new Button(toolbar, SWT.PUSH);
+		// toolItem.setControl(button);
 
 		if (icon != null) {
-			button.setImage(icon);
+			// button.setImage(icon);
 			toolItem.setText(text);
 		} else {
-			button.setText(text);
+			// button.setText(text);
 		}
 
-		button.setBounds(75, 6, 50, 30);
+		// button.setBounds(75, 6, 50, 30);
 	}
 
 	protected ToolBar createNativeToolbar(IWorkbenchWindow window) {
